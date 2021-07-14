@@ -27,3 +27,10 @@ class UpdateFichas(UpdateView):
     fields = ['status_agora', 'proximo_pagamento', 'ultimo_pagamento']
     template_name = 'atualizar.html'
     success_url = ('/')
+
+
+class CreateClientes(CreateView):
+    model = Clientes
+    fields = ['nome', 'plano', 'tela_agora','status_agora', 'proximo_pagamento', 'ultimo_pagamento']
+    template_name = 'novo_cliente.html'
+    success_url = ('/')
