@@ -1,5 +1,5 @@
 from django.contrib import admin
-from clientes.models import Tela, Serviço, Status, Clientes
+from clientes.models import Tela, Serviço, Status, Clientes, Tipo
 
 # Register your models here.
 
@@ -25,3 +25,9 @@ class Ver_Clientes(admin.ModelAdmin):
     list_display = ('nome', 'plano', 'proximo_pagamento', 'ultimo_pagamento')
 
 admin.site.register(Clientes, Ver_Clientes)
+
+
+class Ver_Tipo(admin.ModelAdmin):
+    list_display = ('tipo_atual', 'observacao4')
+
+admin.site.register(Tipo, Ver_Tipo)

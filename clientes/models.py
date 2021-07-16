@@ -26,6 +26,15 @@ class Status(models.Model):
             return "{}".format(self.status_atual)
 
 
+class Tipo(models.Model):
+    tipo_atual = models.CharField(verbose_name='Serviço:', max_length=60, blank=True)
+    observacao4 = models.CharField(verbose_name='Observação:', max_length=60, blank=True)
+
+    def __str__(self):
+            return "{}".format(self.tipo_atual)
+
+
+
 class Clientes(models.Model):
     nome = models.CharField(verbose_name='Nome:', max_length=60, blank=True)
     plano = models.ForeignKey(Serviço, max_length=60, null=True, on_delete=models.PROTECT)
@@ -33,7 +42,7 @@ class Clientes(models.Model):
     status_agora = models.ForeignKey(Status, max_length=60, null=True, on_delete=models.PROTECT)
     proximo_pagamento = models.DateTimeField(max_length=90, null=True)
     ultimo_pagamento = models.DateTimeField(max_length=90, null=True)
-
+    serviço_atualmente = models.ForeignKey(Tipo, max_length=60, null=True, on_delete=models.PROTECT)
 
     def __str__(self):
             return "{}".format(self.nome)
