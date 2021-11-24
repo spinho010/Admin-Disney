@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <title>VENDAS</title>
+    <style>
+        body{
+            background-color: wheat;
+        }
+        main{
+            background-color: white;
+            width: auto;
+            heigth: 600px;
+            margin-left: 30px;
+            margin-right: 30px;
+            padding: 10px;
+            box-shadow: 3px 3px 5px rgb(102, 96, 84);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            border-radius: 5px;
+            color: black;
+            text-align: left; }
+
+            .novo-botao{
+            background-color: white;
+            width: 250px;
+            max-height: 600px;
+            margin: auto;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            color: black;
+            transition: all 1s;
+            margin-left: 60px;
+            margin-right: 60px
+        }
+            .novo-botao:hover{
+            transform: scale(1.1);
+            color: rgb(13, 58, 141);
+            border-radius: 20px;
+            box-shadow: 3px 3px 6px rgb(140, 189, 218);
+            border-color: rgb(13, 54, 141);
+        }
+        }
+    </style>
+    <nav class="navbar navbar-expand navbar-dark bg-dark mb-1">
+        <div class="container">
+            <a class="navbar-brand" href="/">Home</a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/fichas">Fichas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/vendas">Vendas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/conta">Conta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/admin">Administração</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+</head>
+<body>
+    <br><br>
+            <a href="https://mpago.la/1ghpC7U">    
+                <button class="novo-botao">
+                    <h1 style="font-weight: bolder; font-family: Arial, Helvetica, sans-serif;">
+                        <img style="width: 200px; display: inline-block; ;" src="{% static 'fire1.jpg' %}" alt="foto-icon">
+                        Fire TV Stick Lite 2021
+                    </h1>
+                </button>
+            </a>
+            <a href="/estatuto">
+                <button class="novo-botao">
+                    <h1 style="font-weight: bolder; padding: 10px; font-family: Arial, Helvetica, sans-serif;">
+                        <img style="width: 200px; display: inline-block;" src="{% static 'fire2.jpg' %}" alt="foto-icon">
+                        Fire TV Stick - CDV
+                    </h1>
+                </button>
+            </a>
+            <a href="/estatuto">
+                <button class="novo-botao">
+                    <h1 style="font-weight: bolder; padding: 10px; font-family: Arial, Helvetica, sans-serif;">
+                        <img style="width: 200px; display: inline-block;" src="{% static 'fire2.jpg' %}" alt="foto-icon">
+                        Fire TV Stick 4k UHD
+                    </h1>
+                </button>
+            </a>
+            <hr>
+</body>
+</html>

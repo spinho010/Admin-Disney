@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
-    <title>BEM-VINDO</title>
+    <title>VENDAS</title>
     <style>
         body{
             background-color: wheat;
@@ -21,10 +21,34 @@
             box-shadow: 3px 3px 5px rgb(102, 96, 84);
             font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 15px;
             border-radius: 5px;
             color: black;
-            text-align: left;
+            text-align: left; }
+
+            .novo-botao{
+            background-color: white;
+            width: 250px;
+            max-height: 600px;
+            margin: auto;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            border-radius: 15px;
+            text-align: center;
+            cursor: pointer;
+            color: black;
+            transition: all 1s;
+            margin-left: 60px;
+            margin-right: 60px
+        }
+            .novo-botao:hover{
+            transform: scale(1.1);
+            color: rgb(13, 58, 141);
+            border-radius: 20px;
+            box-shadow: 3px 3px 6px rgb(140, 189, 218);
+            border-color: rgb(13, 54, 141);
+        }
         }
     </style>
     <nav class="navbar navbar-expand navbar-dark bg-dark mb-1">
@@ -32,13 +56,7 @@
             <a class="navbar-brand" href="/">Home</a>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/fichas">Fichas</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="/vendas">Vendas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/conta">Conta</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/admin">Administração</a>
@@ -49,26 +67,14 @@
     
 </head>
 <body>
-    <br><br>
-    <a href="/addcliente"><button type="button" class="btn btn-primary" style="margin-left: 30px; display: inline-block;"><h1 style="font-weight: bold; display: inline-block; font-size: 20px;">+</h1> Adiconar Cliente</button></a>
-    <br><br>
+    <br><br><br>
     <main>
-        {% for Clientes in object_list %}
-        
-            Nome: {{ Clientes.nome }} <br>
-            Proximo Pagamento: {{ Clientes.proximo_pagamento }} <br>
-            Último Pagamento: {{ Clientes.ultimo_pagamento }} <br>
-            Situação: {{ Clientes.status_agora }} <br>
-            Serviço: {{ Clientes.serviço_atualmente }} <br>
-    
-        <br>
-        <a href="{% url 'atualizar' Clientes.id %}">
-            <button type="button" class="btn btn-success">Atualizar Pagamento</button>
-        </a>
+        <h2 style="font-weight: bold; text-align: center;">Olá!, Obrigado por realizar a sua compra!</h2>
         <hr>
-        {% endfor %}
+        <p style="font-weight: bold; text-align: center; font-size: 25px;"> 
+            A sua compra ainda está sendo processada! <br>
+            Assim que for finalizada enivaremos voce para ourtra pagina!
+        </p>
     </main>
-
-<br><br><br>
 </body>
 </html>

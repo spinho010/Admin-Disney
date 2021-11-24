@@ -22,6 +22,19 @@ class Conta(TemplateView):
     template_name = 'conta.html'
 
 
+class vender(TemplateView):
+    template_name = 'vendas.html'
+
+
+class sucess(TemplateView):
+    template_name = 'sucess.html'
+
+
+class process(TemplateView):
+    template_name = 'process.html'
+
+
+
 class UpdateFichas(UpdateView):
     model = Clientes
     fields = ['status_agora', 'proximo_pagamento', 'ultimo_pagamento']
